@@ -46,6 +46,7 @@ pytest
 ## Healthcheck
 
 Swagger-cпецификации методов API: [openapi.yml](https://github.com/avtorsky/yacut/blob/master/openapi.yml)
+
 Проверка эндпойнтов сервиса:
 
 ```bash
