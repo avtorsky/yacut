@@ -50,11 +50,11 @@
           <p class="text-center">
           <h5 class="text-center">
             {% with messages = get_flashed_messages() %}
-            {% if messages %}
-            {% for message in messages %}
-            {{ message|safe }}
-            {% endfor %}
-            {% endif %}
+              {% if messages %}
+                {% for message in messages %}
+                  {{ message|safe }}
+                {% endfor %}
+              {% endif %}
             {% endwith %}
           </h5>
           </p>

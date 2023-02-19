@@ -22,3 +22,6 @@ class URLMap(db.Model):
     def from_dict(self, data):
         setattr(self, 'original', data['url'])
         setattr(self, 'short', data['custom_id'])
+
+    def __str__(self):
+        return f'{self.original}, {self.short}'

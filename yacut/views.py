@@ -7,6 +7,11 @@ from . import app, db
 from .forms import YacutForm
 from .models import URLMap
 
+READY_SHORT_URL = (
+            'Ваша новая ссылка готова: '
+            '<a href="{short_url}">{short_url}</a>'
+        )
+
 
 def get_unique_short_id():
     while True:
@@ -32,9 +37,7 @@ def index_view():
         db.session.add(url_map)
         db.session.commit()
         flash(
-            f'Ваша новая ссылка готова: '
-            f'<a href="{request.base_url}{custom_id}">'
-            f'{request.base_url}{custom_id}</a>'
+            READY_SHORT_URL.format(short_url=f'{request.base_url}{custom_id}')
         )
     return render_template('main.html', form=form)
 
