@@ -8,9 +8,9 @@ from .forms import YacutForm
 from .models import URLMap
 
 READY_SHORT_URL = (
-            'Ваша новая ссылка готова: '
-            '<a href="{short_url}">{short_url}</a>'
-        )
+  'Ваша новая ссылка готова: '
+  '<a href="{short_url}">{short_url}</a>'
+)
 
 
 def get_unique_short_id():
